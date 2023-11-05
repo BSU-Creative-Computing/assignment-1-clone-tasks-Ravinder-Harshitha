@@ -1,0 +1,103 @@
+/*@mixin breakpoint($minwidth, $maxwidth){
+    @media screen and (min-width: $minwidth) and (max-width: $maxwidth){
+        @content;
+}*/
+header {
+  background-color: #8ccff7;
+  text-align: center;
+}
+
+picture {
+  display: inline-block;
+}
+
+.row-format, .row_4, .row_3, .row_2, .row_1 {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle-format, .circle_4, .circle_3, .circle_2, .circle_1 {
+  cursor: pointer;
+}
+
+.container.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row_1 {
+  background-color: #4e89ae;
+}
+.row_1:hover {
+  background-color: #444;
+}
+
+.row_2 {
+  background-color: #43658b;
+}
+.row_2:hover {
+  background-color: #444;
+}
+
+.row_3 {
+  background-color: #ed6663;
+}
+.row_3:hover {
+  background-color: #444;
+}
+
+.row_4 {
+  background-color: #ffa372;
+}
+.row_4:hover {
+  background-color: #444;
+}
+
+.circle_1 {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  background-color: #4e89ae;
+}
+.circle_1:hover {
+  background-color: #444;
+}
+
+.circle_2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: #43658b;
+}
+.circle_2:hover {
+  background-color: #444;
+}
+
+.circle_3 {
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+  background-color: #ed6663;
+}
+.circle_3:hover {
+  background-color: #444;
+}
+
+.circle_4 {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #ffa372;
+}
+.circle_4:hover {
+  background-color: #444;
+}
+
+footer {
+  background-color: #8ccff7;
+  height: 50px;
+}/*# sourceMappingURL=Task 3.css.map */

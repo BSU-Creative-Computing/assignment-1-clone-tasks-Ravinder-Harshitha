@@ -1,0 +1,124 @@
+@mixin breakpoint($minwidth, $maxwidth) {
+    @media screen and (min-width: $minwidth) and (max-width: $maxwidth){
+    @content;
+}
+
+
+$bgcolor: #8ccff7;
+$hover: #444;
+
+$colors: #4e89ae #43658b #ed6663 #ffa372;
+
+@mixin center-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: $bgcolor;
+    text-align: center; 
+}
+
+picture {
+    display: inline-block; 
+}
+
+.row-format{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.circle-format{
+    cursor: pointer;
+}
+
+.container.circles{
+    @include center-element;
+}
+
+.row_1 {
+    @extend .row-format;
+    background-color: nth($colors, 1);
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.row_2 {
+    @extend .row-format;
+    background-color: nth($colors, 2);
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.row_3 {
+    @extend .row-format;
+    background-color: nth($colors, 3);
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.row_4 {
+    @extend .row-format;
+    background-color: nth($colors, 4);
+    &:hover {
+        background-color: $hover;
+    }
+}
+
+.circle_1 {
+    @extend .circle-format;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: nth($colors, 1);
+    &:hover {
+        background-color: $hover;
+    }
+  }
+
+  .circle_2 {
+    @extend .circle-format;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: nth($colors, 2);
+    &:hover {
+        background-color: $hover;
+    }
+  }
+
+  .circle_3 {
+    @extend .circle-format;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    background-color: nth($colors, 3);
+    &:hover {
+        background-color: $hover;
+    }
+  }
+
+  .circle_4 {
+    @extend .circle-format;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: nth($colors, 4);
+    &:hover {
+        background-color: $hover;
+    }
+  }
+
+  footer {
+    background-color: $bgcolor;
+    height: 50px;
+}
+}
+
