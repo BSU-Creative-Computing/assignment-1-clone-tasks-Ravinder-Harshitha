@@ -1,21 +1,28 @@
+/* SCSS code for Task 3 */
+
+/* Variables used in scss for Task 3 */
 $bgcolor: #8ccff7;
 $hover: #444;
 
+/* SCSS lists for colors and radii for rows and circles */
 $radii: 70px 80px 90px 100px;
 $colors: #4e89ae #43658b #ed6663 #ffa372;
 
+/* Mixin containing media queries */
 @mixin breakpoint($minwidth, $maxwidth){
     @media screen and (min-width: $minwidth) and (max-width: $maxwidth){
         @content;
     }
 }
 
+/* Mixin used to center elements */
 @mixin center{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Header tag with mixin- breakpoint containing pictures */
 header {
     background-color: $bgcolor;
     height: 400px;
@@ -40,10 +47,11 @@ header {
     }
 }
 
+/* Formatting of rows */
 .rows{
     margin-top: 40px;
 }
-
+/* Mixin for rows */
 .row-format {
     height: 60px;
     display: flex;
@@ -51,9 +59,10 @@ header {
     justify-content: center;
     cursor: pointer;
 }
-
+/* Hover can be found under each class for rows */
 .row_1 {
     @extend .row-format;
+    /* nth function used to access the elements from $color list */
     background-color: nth($colors, 1);
     &:hover {
         background-color: $hover;
@@ -84,26 +93,30 @@ header {
     }
 }
 
+/* Formatting of circles */
 .circles {
     @include center();
     padding-top: 50px;
     padding-bottom: 50px;
     gap: 10px;
     flex-direction: column;
+    /* Breakpoint for circles to change from vertical to inline upon reaching 621px and above */
     @include breakpoint(621px, 1500px) {
         flex-direction: row;
     }
 }
-
+/* Mixin for circles */
 .circle-format{
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
     display: flex;
 }
-
+/* Hover can be found under each class for circles */
 .circle_1 {
     @extend .circle-format;
+    /* nth function used to access the elements from $radii list and $color list */
+    /* In circles, the elements from the $radii list have also been called to be used for width and height of the circle.*/
     width: nth($radii, 1);
     height: nth($radii, 1);
     border-radius: nth($radii, 1);
@@ -146,6 +159,7 @@ header {
     }
 }
 
+/* Formatting of footer */
 footer {
     background-color: $bgcolor;
     height: 50px;

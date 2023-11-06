@@ -1,3 +1,9 @@
+/* SCSS code for Task 3 */
+/* Variables used in scss for Task 3 */
+/* SCSS lists for colors and radii for rows and circles */
+/* Mixin containing media queries */
+/* Mixin used to center elements */
+/* Header tag with mixin- breakpoint containing pictures */
 header {
   background-color: #8ccff7;
   height: 400px;
@@ -28,10 +34,12 @@ header {
   }
 }
 
+/* Formatting of rows */
 .rows {
   margin-top: 40px;
 }
 
+/* Mixin for rows */
 .row-format, .row_4, .row_3, .row_2, .row_1 {
   height: 60px;
   display: flex;
@@ -40,7 +48,9 @@ header {
   cursor: pointer;
 }
 
+/* Hover can be found under each class for rows */
 .row_1 {
+  /* nth function used to access the elements from $color list */
   background-color: #4e89ae;
 }
 .row_1:hover {
@@ -68,6 +78,7 @@ header {
   background-color: #444;
 }
 
+/* Formatting of circles */
 .circles {
   display: flex;
   align-items: center;
@@ -76,6 +87,7 @@ header {
   padding-bottom: 50px;
   gap: 10px;
   flex-direction: column;
+  /* Breakpoint for circles to change from vertical to inline upon reaching 621px and above */
 }
 @media screen and (min-width: 621px) and (max-width: 1500px) {
   .circles {
@@ -83,6 +95,7 @@ header {
   }
 }
 
+/* Mixin for circles */
 .circle-format, .circle_4, .circle_3, .circle_2, .circle_1 {
   cursor: pointer;
   text-align: center;
@@ -90,7 +103,10 @@ header {
   display: flex;
 }
 
+/* Hover can be found under each class for circles */
 .circle_1 {
+  /* nth function used to access the elements from $radii list and $color list */
+  /* In circles, the elements from the $radii list have also been called to be used for width and height of the circle.*/
   width: 70px;
   height: 70px;
   border-radius: 70px;
@@ -130,6 +146,7 @@ header {
   background-color: #444;
 }
 
+/* Formatting of footer */
 footer {
   background-color: #8ccff7;
   height: 50px;
