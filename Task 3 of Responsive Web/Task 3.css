@@ -1,14 +1,35 @@
-/*@mixin breakpoint($minwidth, $maxwidth){
-    @media screen and (min-width: $minwidth) and (max-width: $maxwidth){
-        @content;
-}*/
 header {
   background-color: #8ccff7;
-  text-align: center;
+  height: 400px;
+  width: auto;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  header {
+    background-image: url("https://via.placeholder.com/200");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  header {
+    background-image: url("https://via.placeholder.com/300");
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1500px) {
+  header {
+    background-image: url("https://via.placeholder.com/400");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
-picture {
-  display: inline-block;
+.rows {
+  margin-top: 45px;
 }
 
 .row-format, .row_4, .row_3, .row_2, .row_1 {
@@ -17,16 +38,6 @@ picture {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.circle-format, .circle_4, .circle_3, .circle_2, .circle_1 {
-  cursor: pointer;
-}
-
-.container.circles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .row_1 {
@@ -55,6 +66,28 @@ picture {
 }
 .row_4:hover {
   background-color: #444;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 10px;
+  flex-direction: column;
+}
+@media screen and (min-width: 621px) and (max-width: 1500px) {
+  .circles {
+    flex-direction: row;
+  }
+}
+
+.circle-format, .circle_4, .circle_3, .circle_2, .circle_1 {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
 }
 
 .circle_1 {

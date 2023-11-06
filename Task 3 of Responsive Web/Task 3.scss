@@ -1,43 +1,54 @@
-@mixin breakpoint($minwidth, $maxwidth) {
-    @media screen and (min-width: $minwidth) and (max-width: $maxwidth){
-    @content;
-}
-
-
 $bgcolor: #8ccff7;
 $hover: #444;
 
 $colors: #4e89ae #43658b #ed6663 #ffa372;
 
-@mixin center-element{
+@mixin breakpoint($minwidth, $maxwidth){
+    @media screen and (min-width: $minwidth) and (max-width: $maxwidth){
+        @content;
+    }
+}
+
+@mixin center{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 header {
     background-color: $bgcolor;
-    text-align: center; 
+    height: 400px;
+    width: auto;
+    @include breakpoint(0px, 480px){
+        background-image: url("https://via.placeholder.com/200");
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    @include breakpoint(481px, 800px) {
+        background-image: url("https://via.placeholder.com/300");
+        height: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    @include breakpoint(801px, 1500px) {
+        background-image: url("https://via.placeholder.com/400");
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
-picture {
-    display: inline-block; 
+.rows{
+    margin-top: 45px;
 }
 
-.row-format{
+.row-format {
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-
-.circle-format{
-    cursor: pointer;
-}
-
-.container.circles{
-    @include center-element;
 }
 
 .row_1 {
@@ -72,6 +83,24 @@ picture {
     }
 }
 
+.circles {
+    @include center();
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 10px;
+    flex-direction: column;
+    @include breakpoint(621px, 1500px) {
+        flex-direction: row;
+    }
+}
+
+.circle-format{
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+}
+
 .circle_1 {
     @extend .circle-format;
     width: 70px;
@@ -81,9 +110,9 @@ picture {
     &:hover {
         background-color: $hover;
     }
-  }
+}
 
-  .circle_2 {
+.circle_2 {
     @extend .circle-format;
     width: 80px;
     height: 80px;
@@ -92,9 +121,9 @@ picture {
     &:hover {
         background-color: $hover;
     }
-  }
+}
 
-  .circle_3 {
+.circle_3 {
     @extend .circle-format;
     width: 90px;
     height: 90px;
@@ -103,9 +132,9 @@ picture {
     &:hover {
         background-color: $hover;
     }
-  }
+}
 
-  .circle_4 {
+.circle_4 {
     @extend .circle-format;
     width: 100px;
     height: 100px;
@@ -114,11 +143,9 @@ picture {
     &:hover {
         background-color: $hover;
     }
-  }
+}
 
-  footer {
+footer {
     background-color: $bgcolor;
     height: 50px;
 }
-}
-
