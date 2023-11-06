@@ -29,7 +29,7 @@ header {
 }
 
 .rows {
-  margin-top: 45px;
+  margin-top: 40px;
 }
 
 .row-format, .row_4, .row_3, .row_2, .row_1 {
@@ -72,8 +72,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   gap: 10px;
   flex-direction: column;
 }
